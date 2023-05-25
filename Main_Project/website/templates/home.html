@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %} 
+{% block content%}
+<div class="content">
+    <h1 style="text-align: center">Products Manger</h1>
+    {% if products|length < 1 %}
+    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>   ID     </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>   Product    </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>   Price    </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>   Modified Date  </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>   Producer    </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>   description   </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>                   </th>
+            <th>   Actions     </th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <th>                   </th>
+                <th>                   </th>
+                <th>                   </th>
+                <td>{{ product.Name }}</td>
+                <th>                   </th>
+                <th>                   </th>
+                <th>                   </th>
+                <td>{{ product.Price }}</td>
+                <th>                   </th>
+                <th>                   </th>
+                <th>                   </th>
+                <td>{{ product.date_modified }}</td>
+                <th>                   </th>
+                <th>                   </th>
+                <th>                   </th>
+                <td>{{ product.Producer}}</td>
+                <th>                   </th>
+                <th>                   </th>
+                <th>                   </th>
+                <td>{{ product.description}}</td>
+                <th>                   </th>
+                <th>                   </th>
+                <th>                   </th>
+                <td>
+                    <a href="/delete/{{product.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{product.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+<br />
+<br />
+    <div class="form">
+      <form action="/" method="POST">
+          <h3 align="center">Add Product</h3>
+
+            <label for="Name">Product Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Name"
+              name="Name"
+              placeholder="Enter the Product Name"
+            />
+            <br />
+            <label for="Price">Product Price</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Price"
+              name="Price"
+              placeholder="Enter the Product Price"
+            />
+            <br />
+            <label for="Producer">Producer</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Producer"
+              name="Producer"
+              placeholder="Enter Producer"
+            />
+            <br />
+            <label for="description">Product description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="description"
+              name="description"
+              placeholder="Enter the Product description"
+            />
+          <br />
+          <input type="submit" value="Add Product">
+        </form>
+    </div>
+</div>
+{% endblock %}

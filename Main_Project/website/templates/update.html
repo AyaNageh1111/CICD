@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Manager</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <h1 style="text-align: center">Update Product</h1>
+
+    
+    <div class="form">
+        <form action="/update/{{Products.id}}" method="POST">
+            <h3 align="center">Update Product</h3>
+  
+              <label for="Name">Product Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Name"
+                name="Name"
+                Value="{{Products.Name}}"
+              />
+              <br />
+              <label for="Price">Product Price</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Price"
+                name="Price"
+                Value="{{Products.Price}}"
+              />
+              <br />
+              <label for="Producer">Producer</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Producer"
+                name="Producer"
+                Value="{{Products.Producer}}"
+              />
+              <br />
+              <label for="description">Product description</label>
+              <input
+                type="text"
+                class="form-control"
+                id="description"
+                name="description"
+                Value="{{Products.description}}"
+              />
+            <br />
+            <input type="submit" value="Update Product">
+          </form>
+      </div>
+      
+</div>
+{% endblock %}
