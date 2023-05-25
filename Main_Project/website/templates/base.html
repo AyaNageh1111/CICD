@@ -23,27 +23,66 @@
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbar"
+        data-target="#navbarNavDropdown" 
+        aria-controls="navbarNavDropdown" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar">
-        <div class="navbar-nav">
-          {% if user.is_authenticated %}
-            {%if user.email == "admin@gmail.com" %}
-            <a class="nav-item nav-link" id="home" href="/">Admin_Home</a>
-            <a class="nav-item nav-link" id="view_support" href="/view_support">View support</a>
-            <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-            {% else %}
-            <a class="nav-item nav-link" id="support" href="/support">Support</a>
-            <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-            {% endif %}
-          {% else %}
-          <a class="nav-item nav-link" id="login" href="/login">Login</a>
-          <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
-            
-          {% endif %}
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+                {%if user.email == "admin@gmail.com" %} 
+                <a class="navbar-brand">Let's Shop</a>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('views.admin')}}">product <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('views.brands')}}">brand</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('views.categories')}}">catgory</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Add products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href='/addproduct'>Add product</a>
+                      <a class="dropdown-item" href="{{url_for('views.addbrand')}}">add brand</a>
+                      <a class="dropdown-item" href="{{url_for('views.addcat')}}">add category</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="home" href="/">Filter & Search</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="view_support" href="/support">View support</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="logout" href="/logout">Logout</a>
+                  </li>
+                {% else %}
+                  <li class="nav-item">
+                    <a class="nav-link" id="support" href="/support">support</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url_for('views.getCart')}}" class="nav-link"> Cart ({{ session['Shoppingcart']|length }}) </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="logout" href="/logout">Logout</a>
+                  </li>
+                {% endif %}
+              {% else %}
+                  <li class="nav-item">
+                    <a class="nav-link"  id="login" href="/login">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="signUp" href="/sign-up">Sign Up</a>
+                  </li>
+              {% endif %}
+            </ul>
       </div>
     </nav>
 
