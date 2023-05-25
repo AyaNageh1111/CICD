@@ -28,6 +28,9 @@ jobs:
       - name: Build
         run: dotnet build ./Main_Project/main.py --configuration Release --no-restore
         
+      - name: Test
+        run: test.py
+        
       - name: Publish
         run: dotnet publish ./Main_Project/main.py --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
 
