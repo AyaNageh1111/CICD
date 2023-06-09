@@ -162,4 +162,4 @@ Thank you all for your contributions and support.
 The E-commerce Software System is licensed under the MIT License. See LICENSE for details.
 
 ## Contact
-If you have any questions or comments about our Software App, please contact us at [s-mariam.elseedawy@zewailcity.edu.eg](mailto:s-mariam.elseedawy@zewailcity.edu.eg).
+If you have any questions or comments about our Software App, please contact us at [s-mariam.elseedawy@zewailcity.edu.eg](mailto:s-mariam.elseedawy@zewailcity.edu.eg). [s-aya.mohamed@zewailcity.edu.eg](mailto:s-aya.mohamed@zewailcity.edu.eg).
