@@ -82,14 +82,20 @@ Go to `http://127.0.0.1:5000`
       - wait for admin approval
       - enter your mail
       - enter your password
+  
+   ![Uploading 2.JPG…]()
+
       
    b. As a Admin:
       - enter your mail
      
 3. Admin show all users
    - log in as admin
-   - view users dashboard 
-    
+   - view users dashboard
+  
+     
+    ![3](https://github.com/AyaNageh1111/CICD/assets/75093490/eceffc9f-af74-450c-a96c-3357b8185427)
+
 4. Admin approval:
    - log in as admin
    - view all users request
