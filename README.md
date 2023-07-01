@@ -83,7 +83,7 @@ Go to `http://127.0.0.1:5000`
       - enter your mail
       - enter your password
   
-   ![Uploading 2.JPG…]()
+![2](https://github.com/AyaNageh1111/CICD/assets/75093490/bab64c70-25f7-43a8-91f4-16ee50bb8e28)
 
       
    b. As a Admin:
