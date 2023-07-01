@@ -1,4 +1,5 @@
 # E-commerce Software System
+![1](https://github.com/AyaNageh1111/CICD/assets/75093490/fa72eef6-3ff1-481e-a1be-1337769cdbf5)
 
 ## Description
 The E-commerce Software System is a web-based platform that allows customers to purchase products online. This software system is designed to provide an easy-to-use and secure platform for customers to browse products, add products to their shopping carts, and checkout with payment. The software system also allows administrators to manage products, orders, and customer information.
